@@ -11,7 +11,7 @@ You can access the live version of the app at [https://mitchellhayes.github.io/c
 Clone this repository to your local machine and navigate to the project folder:
 
 ```bash
-git clone https://github.com/[YOUR_GITHUB_USERNAME]/coffeeapp-react.git
+git clone https://github.com/[YOUR_GITHUB_USERNAME]/coffee-app-react.git
 cd coffeeapp-react
 ```
 
