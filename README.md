@@ -12,7 +12,7 @@ Clone this repository to your local machine and navigate to the project folder:
 
 ```bash
 git clone https://github.com/[YOUR_GITHUB_USERNAME]/coffee-app-react.git
-cd coffeeapp-react
+cd coffee-app-react
 ```
 
 Install the dependencies by running the following command:
