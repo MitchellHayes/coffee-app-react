@@ -1,11 +1,25 @@
 import React from "react";
 
 const styles = {
+  outerContainer: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+  },
+  container: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateRows: "repeat(2, 1fr)",
+    gap: "1rem",
+  },
   input: {
     visibility: "hidden",
   },
   label: {
     cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   img: {
     height: "6rem",
@@ -35,38 +49,40 @@ const BrewTypePicker = ({ type2icon, inputName }) => {
   const [checked, setChecked] = React.useState(-1);
 
   return (
-    <div>
-      {Object.entries(type2icon).map(([key, value]) => (
-        <React.Fragment key={key}>
-          <input
-            type="radio"
-            value={key}
-            id={key}
-            name={inputName}
-            style={styles.input}
-            onChange={() => setChecked(key)}
-          />
-          <label
-            title={key}
-            htmlFor={key}
-            style={styles.label}
-            onMouseEnter={() => setHovered(key)}
-            onMouseLeave={() => setHovered(-1)}
-          >
-            <img
-              src={`assets/${value}`}
-              alt={key}
-              style={
-                key === checked
-                  ? styles.imgChecked
-                  : key === hovered
-                  ? styles.imgHover
-                  : styles.img
-              }
+    <div style={styles.outerContainer}>
+      <div style={styles.container}>
+        {Object.entries(type2icon).map(([key, value]) => (
+          <div key={key}>
+            <input
+              type="radio"
+              value={key}
+              id={key}
+              name={inputName}
+              style={styles.input}
+              onChange={() => setChecked(key)}
             />
-          </label>
-        </React.Fragment>
-      ))}
+            <label
+              title={key}
+              htmlFor={key}
+              style={styles.label}
+              onMouseEnter={() => setHovered(key)}
+              onMouseLeave={() => setHovered(-1)}
+            >
+              <img
+                src={`assets/${value}`}
+                alt={key}
+                style={
+                  key === checked
+                    ? styles.imgChecked
+                    : key === hovered
+                    ? styles.imgHover
+                    : styles.img
+                }
+              />
+            </label>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

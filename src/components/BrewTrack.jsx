@@ -50,6 +50,7 @@ const type2icon = {
   frenchpress: "frenchpress-icon.svg",
   "hario-switch": "hario-switch-icon.svg",
   v60: "v60-icon.svg",
+  moccamaster: "moccamaster-icon.svg",
 };
 
 const BrewTrack: React.FC = () => {
