@@ -53,7 +53,7 @@ const type2icon = {
   moccamaster: "moccamaster-icon.svg",
 };
 
-const BrewTrack: React.FC = () => {
+const BrewTrack= () => {
   return (
     <form>
       <div style={styles.coffeeCard}>

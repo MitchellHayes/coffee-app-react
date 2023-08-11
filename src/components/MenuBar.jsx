@@ -43,6 +43,11 @@ const MenuBar = () => {
             BrewMetrics
           </Link>
         </li>
+        <li style={styles.li}>
+          <Link to="/ratioCalc" style={styles.link}>
+            RatioCalc
+          </Link>
+        </li>
       </ul>
     </nav>
   );
