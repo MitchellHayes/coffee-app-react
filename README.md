@@ -24,7 +24,7 @@ npm ci
 Start the development server by running the following command:
 
 ```bash
-npm run start
+npm run dev
 ```
 The app should be up and running on http://localhost:3000/.
 
